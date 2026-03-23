@@ -1,0 +1,324 @@
+/* RESET - remove margens e padroniza tudo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* facilita controle de tamanho */
+}
+
+/* BODY - estilo geral do site */
+body {
+  font-family: Arial, sans-serif;
+  background: #1e3a8a; /* fundo azul */
+  color: #ffffff; /* texto branco */
+  font-size: 18px;
+  line-height: 1.6; /* melhora leitura */
+}
+
+/* NAV - barra superior */
+nav {
+  background: #1e293b;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center;
+  position: relative;
+}
+
+/* TÍTULO DO MENU */
+nav h2 {
+  font-size: 24px;
+}
+
+/* PARTE ESQUERDA (menu + nome) */
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* espaço entre itens */
+}
+
+/* BOTÃO HAMBURGUER */
+#menuToggle {
+  display: block;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100; /* fica acima de tudo */
+}
+
+/* BOTÃO DE TEMA (claro/escuro) */
+.tema-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* MENU LATERAL */
+#menu {
+  position: fixed; /* fica fixo na tela */
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh; /* altura total da tela */
+
+  background: #1e293b;
+
+  display: flex;
+  flex-direction: column; /* itens um abaixo do outro */
+
+  padding: 80px 20px 20px;
+
+  transform: translateX(-100%); /* escondido */
+  transition: 0.3s ease; /* animação */
+
+  list-style: none;
+  z-index: 1000;
+}
+
+/* MENU ABERTO */
+#menu.show {
+  transform: translateX(0); /* aparece */
+}
+
+/* ITENS DO MENU */
+#menu li {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* LINKS DO MENU */
+#menu a {
+  display: block;
+  width: 100%;
+  padding: 15px 5px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+/* HOVER (quando passa o mouse) */
+#menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* LINHA ANIMADA */
+#menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* MOSTRA A LINHA */
+#menu a:hover::after {
+  width: 100%;
+}
+
+/* SEÇÕES DO SITE */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto; /* centraliza */
+}
+
+/* TÍTULOS */
+section h1 {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+  font-size: 34px;
+}
+
+/* CARDS (CAIXAS DE CONTEÚDO) */
+.card,
+.card-gray {
+  background: #1e293b;
+  color: white;
+  padding: 35px;
+  margin: 30px auto;
+  border-radius: 14px;
+  max-width: 850px;
+
+  /* sombra para dar profundidade */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TEXTO */
+.card p,
+.card-gray p,
+li {
+  font-size: 17px;
+}
+
+/* BOTÕES */
+.botoes {
+  margin-top: 25px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn {
+  padding: 12px 18px;
+  background: #111827;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* HOVER BOTÃO */
+.btn:hover {
+  background: #374151;
+}
+
+/* BOTÃO BORDA */
+.btn-outline {
+  padding: 12px 18px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+/* CARROSSEL */
+.carousel {
+  overflow: hidden; /* esconde o excesso */
+  margin: 30px auto;
+}
+
+/* FAIXA DE IMAGENS */
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite; /* movimento automático */
+}
+
+/* PAUSA AO PASSAR O MOUSE */
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* IMAGENS */
+.carousel img {
+  width: 340px;
+  height: 220px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* ZOOM AO PASSAR O MOUSE */
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMAÇÃO */
+@keyframes scroll {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CONTATO (SEÇÃO FINAL) */
+#contato {
+  background: #1e293b;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* TÍTULO CENTRALIZADO */
+#contato h1 {
+  text-align: center;
+}
+
+/* FORMULÁRIO */
+#contato form {
+  margin: 0 auto;
+  max-width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CAMPOS */
+#contato input,
+#contato textarea {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* FOCO (quando clica no campo) */
+#contato input:focus,
+#contato textarea:focus {
+  outline: none;
+  border: 1px solid #2563eb;
+}
+
+/* BOTÃO DO FORM */
+#contato button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #111827;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER BOTÃO */
+#contato button:hover {
+  background: #374151;
+}
+
+/* MODO ESCURO */
+.dark {
+  background: #0f172a;
+}
+
+/* ELEMENTOS NO MODO ESCURO */
+.dark nav,
+.dark #menu,
+.dark .card,
+.dark #contato {
+  background: #020617;
+}
+
+/* RESPONSIVO (CELULAR) */
+@media (max-width: 600px) {
+  section {
+    padding: 60px 15px;
+  }
+
+  .carousel img {
+    width: 280px;
+    height: 180px;
+  }
+}

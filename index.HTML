@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Matheus</title>
+
+  <!-- Importa o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <nav>
+
+  <!-- Parte esquerda do menu (botão + título) -->
+  <div class="menu-left">
+
+    <!-- Botão hamburguer que abre/fecha o menu -->
+    <button id="menuToggle">☰</button>
+
+    <!-- Nome do portfólio -->
+    <h2>Portifólio Matheus</h2>
+  </div>
+
+  <!-- BOTÃO PARA TROCAR TEMA (claro/escuro) -->
+  <button id="temaBtn" class="tema-btn">🌙</button>
+
+  <!-- Menu lateral com navegação entre seções -->
+  <ul id="menu">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+  <!-- SEÇÃO SOBRE -->
+  <section id="sobre">
+    <h1>Sobre mim</h1>
+
+    <!-- Card com informações pessoais -->
+    <div class="card-gray">
+      <p>Sou estudante de Analise e desenvolvimento de Sistemas o famoso ADS sou apaixonado por tecnologia, 
+        adoro aprender coisas novas, quando não estou no mundo da tecnologia, gosto de me aventurar no mundo 
+        da musica. No mundo da tecnologia me interessei por programação web e meu foco é na linguagem python!
+        Agora vou apresentar alguns hobbies e tambem disponibilizarei alguns projetos que fiz, caso tenha se 
+        interessado pelo meu perfil entre em contato respondendo o formulario ao final da pagina, OBRIGADO!</p>
+
+      <br>
+
+      <!-- Lista de hobbies -->
+      <h3>Hobbies</h3>
+      <br>
+      <ul>
+        <li>Programar;</li>
+        <li>Aprender sobre musica, novos instrumentos, etc;</li>       
+        <li>Aprender novas tecnologias.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEÇÃO FORMAÇÃO -->
+  <section id="formacao">
+    <h1>Formação</h1>
+    <br>
+
+    <!-- Card com formação e cursos -->
+    <div class="card-gray">
+      <p>Estou cursando Analise e Desenvolvimento de Sistemas(ADS)-(em andamento)</p>
+
+      <br>
+
+      <!-- Lista de cursos -->
+      <h3>Cursos</h3>
+      <ul>
+        <li>Python</li>
+        <li>HTML e CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <br>
+
+      <!-- Lista de idiomas -->
+      <h3>Idiomas</h3>
+      <ul>
+        <li>Português - Nativo</li>
+        <li>Inglês - Intermediário</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PORTFÓLIO -->
+  <section id="portfolio">
+    <h1>Portfólio</h1>
+
+    <!-- PROJETO 1 -->
+    <div class="card">
+      <h2>Projeto Python</h2>
+
+      <!-- Descrição do projeto -->
+      <p>Projeto em python, esse projeto consiste em uma atividade realizada pela faculdade, 
+        na materia de logica de programção e algoritmos, nessa atividade realizei soluções de 
+        algumas situações em python, segue abaixo prints da resposta do console e o link para acessar meu github!</p>
+
+      <!-- Carrossel de imagens -->
+      <div class="carousel">
+        <div class="carousel-track">
+
+          <!-- Imagens do projeto -->
+          <img src="img/CONSOLE_TRABALHO1.png">
+          <img src="img/CONSOLE-TRABALHO2.png">
+          <img src="img/CONSOLE-TRABALHO3.png">
+          <img src="img/CONSOLE-TRABALHO4(saida 1).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 2).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 3).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 4).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 5).png">
+
+          <!-- Repetição para efeito de loop no carrossel -->
+          <img src="img/CONSOLE_TRABALHO1.png">
+          <img src="img/CONSOLE-TRABALHO2.png">
+          <img src="img/CONSOLE-TRABALHO3.png">
+          <img src="img/CONSOLE-TRABALHO4(saida 1).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 2).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 3).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 4).png">
+          <img src="img/CONSOLE-TRABALHO4(saida 5).png">
+
+        </div>
+      </div>
+
+      <!-- Botão para acessar o GitHub -->
+      <div class="botoes">
+        <a href="https://github.com/INOjoias/trabalhos-python.git" target="_blank" class="btn">
+          Ver no GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- PROJETO 2 -->
+    <div class="card">
+      <h2>Site HTML/CSS</h2>
+
+      <!-- Descrição do projeto -->
+      <p>Site desenvolvido durante os estudos de fundamentos da web, nesse trabalho tive meu primeiro 
+        contato com programação, aqui realizei a construção de um web site utilizando HTML5, CSS3 e JS.</p>
+
+      <!-- Botões de acesso -->
+      <div class="botoes">
+        <a href="https://github.com/INOjoias/trabalhofds.uninter.git" target="_blank" class="btn">
+          Ver no GitHub
+        </a>
+
+        <a href="https://inojoias.github.io/trabalhofds.uninter/" class="btn-outline">
+          Ver projeto
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO CONTATO -->
+  <section id="contato">
+    <h1>Contato</h1>
+
+    <!-- Formulário de contato -->
+    <form id="formContato">
+
+      <!-- Campo nome -->
+      <input type="text" id="nome" placeholder="Nome" required>
+
+      <!-- Campo email -->
+      <input type="email" id="email" placeholder="Email" required>
+
+      <!-- Campo mensagem -->
+      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+
+      <!-- Botão de envio -->
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Área para mensagens (status) -->
+    <p id="status"></p>
+  </section>
+
+  <!-- Importa o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
